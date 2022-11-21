@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="a.css">
+    <script type="text/javascript">
+        function goToNewPage()
+        {
+            var url = document.getElementById('list').value;
+            if(url != 'none') {
+                window.location = url;
+            }
+        }
+    </script>
+       
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEW TRIP REQUEST</title>
+    <title>Document</title>
 </head>
 <body>
-    <div>
-        <div>
-            <label for="trip-type">TRIP TYPE</label>
-            <select name="trip-type">
-                <option value="select type" >select TYPE</option>
-                <option><a href="dom.html"> DOMESTIC</a></option>
-                <option value="INTERNATIONAL">INTERNATIONAL</option>
-            </select>
-            <input type=button value="Go" onclick="goToNewPage()" />
-           </div>
-    </div>
-</body> 
+    <form>
+        <select name="list" id="list" accesskey="target">
+            <option value='none' selected>Choose Trip type</option>
+            <option value="dom.html">DOMESTIC</option>
+            <option value="international.html">INTERNATIONAL</option>
+            
+        </select>
+        <input type=button value="Go" onclick="goToNewPage()" />
+        </form>
+</body>
 </html>
